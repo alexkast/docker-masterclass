@@ -1,4 +1,4 @@
-FROM node:18-alpine AS build
+FROM node:18-alpine AS build-app
 WORKDIR /app
 COPY package.json yarn.lock ./
 RUN yarn install --production
@@ -6,8 +6,8 @@ COPY . .
 
 FROM node:18-alpine
 WORKDIR /app
-COPY --from=build /app/node_modules /app/node_modules
-COPY --from=build /app .
+COPY --from=build-app /app/node_modules /app/node_modules
+COPY --from=build-app /app .
 RUN addgroup -S appgroup && adduser -S appuser -G appgroup && \
     chown -R appuser:appgroup /app && \
     mkdir -p /etc/todos && \
