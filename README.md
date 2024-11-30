@@ -4,6 +4,7 @@ This repository is a todo application for the Docker Master Class.
 
 The application is based on the application from the Getting Started tutorial at https://github.com/docker/getting-started
 
+---
 # Tasks list
 
 - [Task 00 - Demonstration of Working Linux Namespaces and Cgroups](#Task-00)
@@ -67,6 +68,7 @@ cat memory.max | awk '{$1=$1/1024/1024; print}'
 ```sh
 cat cpu.max
 ```
+---
 
 ## Task 01 - Build an Image Based on Ubuntu
 
@@ -85,6 +87,8 @@ docker run -dp 3000:3000 --name todos-app-task-01 todos-app-task-01
 docker stop todos-app-task-01 && docker rm todos-app-task-01
 ```
 
+---
+
 ## Task 02 - Build an Image Based on Ubuntu with Optimized Layers
 
 ### Build image
@@ -101,6 +105,8 @@ docker run -dp 3000:3000 --name todos-app-task-02 todos-app-task-02
 ```sh
 docker stop todos-app-task-02 && docker rm todos-app-task-02
 ```
+
+---
 
 ## Task 03 - Build an Image Based on Ubuntu with Optimized Layers and Cleanup Cache
 
@@ -119,6 +125,8 @@ docker run -dp 3000:3000 --name todos-app-task-03 todos-app-task-03
 docker stop todos-app-task-03 && docker rm todos-app-task-03
 ```
 
+---
+
 ## Task 04 - Build an Image on Node Alpine
 
 ### Build image
@@ -135,6 +143,8 @@ docker run -dp 3000:3000 --name todos-app-task-04 todos-app-task-04
 ```sh
 docker stop todos-app-task-04 && docker rm todos-app-task-04
 ```
+
+---
 
 ## Task 05 - Build an Image on Node Alpine with Optimized Layers and Security Enhancements
 
@@ -153,6 +163,8 @@ docker run -dp 3000:3000 --name todos-app-task-05 todos-app-task-05
 docker stop todos-app-task-05 && docker rm todos-app-task-05
 ```
 
+---
+
 ## Task 06 - Multi-Stage Build with Docker Volume Demonstration
 
 ### Build image
@@ -169,6 +181,8 @@ docker run -dp 3000:3000 --name todos-app-task-06 todos-app-task-06
 ```sh
 docker stop todos-app-task-06 && docker rm todos-app-task-06
 ```
+
+---
 
 ## Task 07 - Docker Compose Demonstration
 

@@ -3,3 +3,4 @@ Dockerfile
 docker-compose.yaml
 .env
 task*
+README.md
