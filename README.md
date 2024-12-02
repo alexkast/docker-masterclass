@@ -172,14 +172,19 @@ docker stop todos-app-task-05 && docker rm todos-app-task-05
 docker build --no-cache -t todos-app-task-06 -f task06/Dockerfile .
 ```
 
-### Run container
+### Create docker volume
 ```sh
-docker run -dp 3000:3000 --name todos-app-task-06 todos-app-task-06
+docker volume create todo-db
+```
+
+### Run container with volume
+```sh
+docker run -dp 3000:3000 --mount type=volume,src=todo-db,target=/etc/todos --name todos-app-task-06 todos-app-task-06
 ```
 
 ### Cleanup
 ```sh
-docker stop todos-app-task-06 && docker rm todos-app-task-06
+docker stop todos-app-task-06 && docker rm todos-app-task-06 && docker volume rm todo-db
 ```
 
 ---
