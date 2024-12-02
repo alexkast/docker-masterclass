@@ -191,6 +191,20 @@ docker stop todos-app-task-06 && docker rm todos-app-task-06 && docker volume rm
 
 ## Task 07 - Docker Compose Demonstration
 
+### Create file with MySQL credentials
+
+> [!NOTE]
+> Change the MYSQL_PASSWORD to your own
+
+```sh
+cat << EOF > .env
+MYSQL_HOST=mysql
+MYSQL_USER=root
+MYSQL_PASSWORD=<DBPassword>
+MYSQL_DB=todos
+EOF
+```
+
 ### Run docker compose
 ```sh
 docker-compose up -d
