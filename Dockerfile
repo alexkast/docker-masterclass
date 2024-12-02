@@ -9,9 +9,7 @@ WORKDIR /app
 COPY --from=build /app/node_modules /app/node_modules
 COPY --from=build /app .
 RUN addgroup -S appgroup && adduser -S appuser -G appgroup && \
-    chown -R appuser:appgroup /app && \
-    mkdir -p /etc/todos && \
-    chown -R appuser:appgroup /etc/todos
+    chown -R appuser:appgroup /app
 USER appuser
 EXPOSE 3000
 CMD ["node", "src/index.js"]
