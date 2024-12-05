@@ -1,4 +1,8 @@
 node_modules
+slides
+docker-workbook
 Dockerfile
 docker-compose.yaml
 .env
+task*
+README.md
